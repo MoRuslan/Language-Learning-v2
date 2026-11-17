@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="difficulty">
+        <h2>Рівень складності</h2>
+        <div class="levels">
+            <label><input type="radio" name="difficulty" value="easy" checked>Початковий</label>
+            <label><input type="radio" name="difficulty" value="medium">Середній</label>
+            <label><input type="radio" name="difficulty" value="hard">Високий</label>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Language Learning</h1>
+        <div class="card" id="wordCard">
+            <span id="word"></span>
+        </div>
+        <div class="navigation">
+            <button id="prevBtn" disabled>&larr;</button>
+            <span id="step">1/12</span>
+            <button id="nextBtn">&rarr;</button>
+        </div>
+        <input type="text" id="translation" placeholder="Введіть переклад..." maxlength="40" autocomplete="off" >
+        <p id="message"></p>
+        <div class="statistics">
+            <h2>Статистика</h2>
+            <div class="stats">
+                <div class="correct">
+                    <span>Вірно</span>
+                    <span id="correctCount">0</span>
+                </div>
+                <div class="incorrect">
+                    <span>Невірно</span>
+                    <span id="incorrectCount">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="resultModal">
+        <div class="modal-content">
+            <h2>Результат навчання</h2>
+            <p id="finalScore"></p>
+            <p id="level"></p>
+            <button id="restartBtn">Почати знову</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="Script/script.js"></script>
+</body>
+</html>
